@@ -9,6 +9,7 @@ def caesar_cipher(string, number)
     ord.each do |word|
         
         word.each_char do |i|
+            
             if (i.ord > 96) && (i.ord < 123)
             
                 y = i.ord + number
@@ -17,13 +18,16 @@ def caesar_cipher(string, number)
                     y -= 26
                 end
             
-            else
+            elsif (i.ord > 65) && (i.ord < 90)
             
                 y = i.ord + number
             
                 if y > 90
                     y -= 26
                 end
+                
+            else
+                y = i.ord
             
             end
         
