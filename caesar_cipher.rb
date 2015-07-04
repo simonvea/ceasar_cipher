@@ -10,7 +10,7 @@ def caesar_cipher(string, number)
         
         word.each_char do |i|
             
-            if (i.ord > 96) && (i.ord < 123)
+            if (i.ord > 96) && (i.ord < 123) #.ord gjør bokstav til tall
             
                 y = i.ord + number
             
@@ -31,7 +31,7 @@ def caesar_cipher(string, number)
             
             end
         
-            nytt_ord.push(y.chr)
+            nytt_ord.push(y.chr) #.chr gjør tall til bokstav
         
         end
             
